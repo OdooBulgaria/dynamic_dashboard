@@ -1,0 +1,19 @@
+openerp.dynamic_dashboard = function(instance, local) {
+    var _t = instance.web._t,
+        _lt = instance.web._lt;
+    var QWeb = instance.web.qweb;
+    instance.web.dynamic_dashboard = instance.web.dynamic_dashboard || {}
+    console.log("===================shivam1");
+    instance.web.views.add('add_fields_dashboard_form', 'instance.web.dynamic_dashboard.add_fields_dashboard');    
+    console.log("==============shivam2",instance.web);
+    instance.web.dynamic_dashboard.add_fields_dashboard = instance.web.form.DashBoard.extend({
+        init: function(view, node) {
+            console.log("====================view",view);
+            console.log("-===================node",node.attrs);
+        	this._super.apply(view, node);
+            this.form_template = 'DashBoard';
+            this.actions_attrs = {};
+            this.action_managers = [];
+        },    
+    });
+}

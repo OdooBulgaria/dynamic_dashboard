@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<!-- Registering the javascript -->
+        <template id="assets_backend" name="dynamic_dashboard_assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+            	<link rel="stylesheet" href="/dynamic_dashboard/static/src/css/dynamic_dashboard.css"/>
+                <script type="text/javascript" src="/dynamic_dashboard/static/src/js/dynamic_dashboard.js"/>
+            </xpath>
+        </template>
+	</data>
+</openerp>

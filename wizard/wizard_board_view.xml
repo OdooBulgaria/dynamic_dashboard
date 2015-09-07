@@ -1,0 +1,28 @@
+<openerp>
+	<data>
+		<record id = "dynamic_board_view" model = "ir.ui.view">
+            <field name="name">Dashboard Wizard</field>
+            <field name="model">dynamic.board.wizard</field>
+            <field name="arch" type="xml">
+				<form string = "Board">
+					<group>
+						<field name = "order_id" />
+					</group>
+					<footer>
+						<button name = "%(dynamic_dashboard.open_board_school)d" string = "Open Report" type = "action" class = "oe_highlight"/>
+					</footer>
+				</form>	
+			</field>
+		</record>
+		
+		<record id = "action_dynamic_board" model = "ir.actions.act_window">
+            <field name="name">Dashboard Wizard Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">dynamic.board.wizard</field>
+            <field name= "target">new</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+		</record>
+		<menuitem id = "dynamic_menu_board_item" parent = "base.next_id_64" action = "action_dynamic_board" />
+	</data>
+</openerp>

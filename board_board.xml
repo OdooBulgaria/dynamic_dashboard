@@ -1,0 +1,30 @@
+<openerp>
+	<data>
+        <record id="board_board_form" model="ir.ui.view">
+            <field name="name">board.school.form</field>
+            <field name="model">board.board</field>
+            <field name="arch" type="xml">
+                <form string="School Dashboard" version="7.0">
+                    <board style="2-2">
+                        <column>
+                            <action name="%(sale.action_order_report_all)d" string="Exam"/>
+                        </column>
+                        <column>
+                        	<action name="%(account.action_account_treasury_report_all)d" string="Treasury Analysis"/>
+                         </column>
+                    </board>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_board_school" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">board.board</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{"dantunes_board":True}</field>
+            <field name="view_id" ref="board_board_form"/>
+        </record>
+
+	</data>
+</openerp>
