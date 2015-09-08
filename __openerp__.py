@@ -35,11 +35,13 @@
     'data': [
              "board_board.xml",
              "wizard/wizard_board_view.xml",
-             "dynamic_dashboard.xml"
+#              "dynamic_dashboard.xml"  #for version 8
              ],
     'demo': [],
     'test': [],
     'qweb':['static/src/xml/*.xml'],
+    'js':['/dynamic_dashboard/static/src/js/dynamic_dashboard.js'],
+    'css':['/dynamic_dashboard/static/src/css/dynamic_dashboard.css'],
     'installable': True,
     'auto_install': False,
     'application': True,
